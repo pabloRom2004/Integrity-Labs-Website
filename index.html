@@ -7,16 +7,16 @@
   <link rel="icon" href="assets/favicon.ico" />
   <meta name="description" content="Integrity Bench measures whether frontier AI models know their own competence boundaries, do they calibrate confidence correctly as tasks scale past the point they can solve?" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="🤖 Integrity Bench" />
-  <meta property="og:description" content="Frontier AI seems broadly overconfident about its own ability. This benchmark shows by how much." />
+  <meta property="og:title" content="Integrity Bench" />
+  <meta property="og:description" content="Frontier AI seems broadly overconfident about its own ability. This benchmark helps show by how much." />
   <meta property="og:image" content="https://integrity-bench.com/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="🤖 Integrity Bench" />
-  <meta name="twitter:description" content="Frontier AI seems broadly overconfident about its own ability. This benchmark shows by how much." />
+  <meta name="twitter:title" content="Integrity Bench" />
+  <meta name="twitter:description" content="Frontier AI seems broadly overconfident about its own ability. This benchmark helps show by how much." />
   <meta name="twitter:image" content="https://integrity-bench.com/assets/og-image.png" />
-  <link rel="stylesheet" href="css/styles.css?v=20260815f" />
+  <link rel="stylesheet" href="css/styles.css?v=20260827a" />
 </head>
 <body>
 
@@ -24,9 +24,9 @@
 
     <!-- ───────────────────────── Title + one-paragraph snapshot ───────────────────────── -->
     <header class="site-intro">
-      <h1 class="site-title">🤖&nbsp;Integrity&nbsp;Bench</h1>
+      <h1 class="site-title">Integrity&nbsp;Bench</h1>
       <p class="site-tagline">
-        <b>Frontier AI seems broadly overconfident about its own ability. This benchmark shows just by how much.</b>
+        <b>Frontier AI seems broadly overconfident about its own ability. This benchmark helps show by how much.</b>
       </p>
     </header>
 
@@ -135,7 +135,23 @@
     <section class="prose-section examples-section" id="examples">
       <h2>Example Questions</h2>
       <p>
-        How do we measure the confidence error of AI? We do this by getting models to complete questions across a wide range of domains and then asking them their confidence on how likely they are to be correct as a percentage (0 - 100%), then from this we can calculate the Brier score which is then scaled to be the Integrity Score.
+        How do we measure the confidence error of AI? We do this by getting models to complete
+        questions across a wide range of hand-curated and partially manually-crafted domains and
+        in the same prompt asking them their confidence on how likely they are to be correct as a
+        percentage (0 - 100%). To derive Integrity (our bespoke measurement of calibration) we do
+        the following calculation:
+      </p>
+      <ol class="integrity-steps">
+        <li>For each question: error = (confidence − outcome)², where confidence is 0–1 and outcome
+          is 1 if right, 0 if wrong. (e.g. 90% confident but wrong → (0.9−0)² = 0.81)</li>
+        <li>Average that over all questions → the Brier score (invented by Glenn Brier, 1950, for
+          weather forecasters).</li>
+        <li>Integrity Score = 100 − 400 × Brier. The 400 makes 100 = perfect and 0 = a coin-flip
+          baseline (always saying 50% on 50/50 questions gives Brier 0.25 → score 0).</li>
+      </ol>
+      <p>
+        It's only computed on the questions in each model's ~50%-accuracy difficulty band, so can
+        better distinguish integrity from raw capability.
       </p>
       <p>
         Here we have some examples from 3 of our domains, there are 10 in total for this benchmark. We want to keep this benchmark as private as possible, so we are only showing a couple of examples here.
@@ -2211,12 +2227,12 @@ Erin: apple = blue box; key = green box; coin = red box; marble = green box<br /
       vs.src = '/_vercel/insights/script.js'; document.head.appendChild(vs);
     }
   </script>
-  <script src="js/data.js?v=20260815f"></script>
-  <script src="js/charts.js?v=20260815f"></script>
-  <script src="js/levelplot.js?v=20260815f"></script>
+  <script src="js/data.js?v=20260827a"></script>
+  <script src="js/charts.js?v=20260827a"></script>
+  <script src="js/levelplot.js?v=20260827a"></script>
   <script src="js/calplot.js?v=20260810b"></script>
-  <script src="js/timeplot.js?v=20260815f"></script>
-  <script src="js/app.js?v=20260815f"></script>
-  <script src="js/table.js?v=20260815f"></script>
+  <script src="js/timeplot.js?v=20260827a"></script>
+  <script src="js/app.js?v=20260827a"></script>
+  <script src="js/table.js?v=20260827a"></script>
 </body>
 </html>

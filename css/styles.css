@@ -415,6 +415,12 @@ main, .site-footer { zoom: 0.85; }
 /* Paragraph text left-aligned for readability — the 70ch block itself stays centred above.
    Scoped to DIRECT section children so text inside cards/bubbles/captions keeps its own alignment. */
 .prose-section > p { text-align: left; }
+/* the Integrity-score calculation steps — same measure and alignment as the prose column */
+.integrity-steps {
+  font-size: 1.05rem; color: var(--ink); max-width: 70ch;
+  margin: 0 auto 18px; padding-left: 26px; text-align: left;
+}
+.integrity-steps li { margin-bottom: 8px; }
 .prose-section p strong { color: var(--ink); }
 
 /* worked-example strip (placeholder tiles until the new-object renders drop in) */
