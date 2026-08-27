@@ -1,0 +1,742 @@
+{
+  "model": "qwen3.6-35b-a3b",
+  "model_id": "openrouter/qwen/qwen3.6-35b-a3b",
+  "domain": "reasoning_puzzles",
+  "variant": "no_tools_confidence",
+  "scorer": "program_with_confidence_confidence_only",
+  "n_tasks": 80,
+  "n_done": 30,
+  "n_excluded": 0,
+  "n_unfinished": 50,
+  "mean_score": null,
+  "mean_confidence": 53.5,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.185062,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 1492.81,
+  "avg_time_seconds": 49.76,
+  "tasks": [
+    {
+      "id": "reasoning_puzzles_l01_001",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001846,
+      "time_seconds": 9.51,
+      "working_seconds": 9.1,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0018463200000000003,
+          "time_seconds": 9.508
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_002",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00699,
+      "time_seconds": 61.2,
+      "working_seconds": 60.79,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0069903199999999995,
+          "time_seconds": 61.195
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_003",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003317,
+      "time_seconds": 22.69,
+      "working_seconds": 22.29,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0033173200000000003,
+          "time_seconds": 22.688
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_004",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002236,
+      "time_seconds": 10.09,
+      "working_seconds": 9.69,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.00223632,
+          "time_seconds": 10.09
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_005",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007888,
+      "time_seconds": 93.34,
+      "working_seconds": 92.94,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.007888319999999999,
+          "time_seconds": 93.343
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_006",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001852,
+      "time_seconds": 12.4,
+      "working_seconds": 12.01,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0018523200000000002,
+          "time_seconds": 12.401
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_007",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003325,
+      "time_seconds": 18.45,
+      "working_seconds": 18.05,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.00332532,
+          "time_seconds": 18.447
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_008",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003677,
+      "time_seconds": 25.5,
+      "working_seconds": 25.1,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00367732,
+          "time_seconds": 25.5
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_009",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002476,
+      "time_seconds": 16.4,
+      "working_seconds": 16.0,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.00247632,
+          "time_seconds": 16.4
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l01_010",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00369,
+      "time_seconds": 20.47,
+      "working_seconds": 20.07,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.00369032,
+          "time_seconds": 20.468
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_001",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.008227,
+      "time_seconds": 72.45,
+      "working_seconds": 72.06,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0082273,
+          "time_seconds": 72.454
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_002",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.008019,
+      "time_seconds": 70.92,
+      "working_seconds": 70.52,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0080193,
+          "time_seconds": 70.92
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_003",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006407,
+      "time_seconds": 45.96,
+      "working_seconds": 45.57,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.0064073,
+          "time_seconds": 45.963
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_004",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007796,
+      "time_seconds": 52.08,
+      "working_seconds": 51.68,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0077963,
+          "time_seconds": 52.076
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_005",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005098,
+      "time_seconds": 42.28,
+      "working_seconds": 41.88,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0050983,
+          "time_seconds": 42.277
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_006",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007689,
+      "time_seconds": 69.89,
+      "working_seconds": 69.49,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.0076893000000000005,
+          "time_seconds": 69.89
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_007",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003544,
+      "time_seconds": 27.44,
+      "working_seconds": 27.04,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0035443000000000002,
+          "time_seconds": 27.437
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_008",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.009091,
+      "time_seconds": 81.94,
+      "working_seconds": 81.54,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0090913,
+          "time_seconds": 81.941
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_009",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007986,
+      "time_seconds": 48.15,
+      "working_seconds": 47.75,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0079863,
+          "time_seconds": 48.149
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l02_010",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 50.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00756,
+      "time_seconds": 44.07,
+      "working_seconds": 43.68,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 50.0,
+          "abs_error": null,
+          "cost_usd": 0.0075603,
+          "time_seconds": 44.074
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_001",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006401,
+      "time_seconds": 46.68,
+      "working_seconds": 37.24,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.0064013,
+          "time_seconds": 46.682
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_002",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.008108,
+      "time_seconds": 108.7,
+      "working_seconds": 98.67,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0081083,
+          "time_seconds": 108.703
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_003",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 30.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007452,
+      "time_seconds": 41.76,
+      "working_seconds": 29.4,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 30.0,
+          "abs_error": null,
+          "cost_usd": 0.0074523,
+          "time_seconds": 41.758
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_004",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.008458,
+      "time_seconds": 69.01,
+      "working_seconds": 52.65,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.008458299999999998,
+          "time_seconds": 69.013
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_005",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 0.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007678,
+      "time_seconds": 47.76,
+      "working_seconds": 29.36,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 0.0,
+          "abs_error": null,
+          "cost_usd": 0.0076783,
+          "time_seconds": 47.756
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_006",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 40.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007075,
+      "time_seconds": 60.58,
+      "working_seconds": 49.62,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 40.0,
+          "abs_error": null,
+          "cost_usd": 0.0070753000000000005,
+          "time_seconds": 60.581
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_007",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006977,
+      "time_seconds": 61.14,
+      "working_seconds": 48.56,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.0069773000000000005,
+          "time_seconds": 61.144
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_008",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00803,
+      "time_seconds": 78.31,
+      "working_seconds": 65.22,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0080303,
+          "time_seconds": 78.313
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_009",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 60.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.008785,
+      "time_seconds": 66.42,
+      "working_seconds": 55.37,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 60.0,
+          "abs_error": null,
+          "cost_usd": 0.0087853,
+          "time_seconds": 66.415
+        }
+      ]
+    },
+    {
+      "id": "reasoning_puzzles_l03_010",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 100.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007384,
+      "time_seconds": 67.22,
+      "working_seconds": 43.88,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 100.0,
+          "abs_error": null,
+          "cost_usd": 0.0073843,
+          "time_seconds": 67.217
+        }
+      ]
+    }
+  ]
+}

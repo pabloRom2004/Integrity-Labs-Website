@@ -1,0 +1,742 @@
+{
+  "model": "gemini-3.6-flash",
+  "model_id": "google/gemini-3.6-flash",
+  "domain": "chess_puzzles",
+  "variant": "no_tools_pressure",
+  "scorer": "chess_mate_with_confidence",
+  "n_tasks": 80,
+  "n_done": 30,
+  "n_excluded": 0,
+  "n_unfinished": 50,
+  "mean_score": 0.3,
+  "mean_confidence": 98.8333,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 1.299124,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 12995.3,
+  "avg_time_seconds": 433.18,
+  "tasks": [
+    {
+      "id": "chess_puzzles_l01_001",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.015732,
+      "time_seconds": 389.64,
+      "working_seconds": 389.46,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.015732,
+          "time_seconds": 389.645
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_002",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.012843,
+      "time_seconds": 389.96,
+      "working_seconds": 389.66,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.012843,
+          "time_seconds": 389.962
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_003",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.016994,
+      "time_seconds": 400.2,
+      "working_seconds": 399.85,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.0169935,
+          "time_seconds": 400.202
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_004",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.391595,
+      "time_seconds": 400.53,
+      "working_seconds": 400.13,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.3915945,
+          "time_seconds": 400.533
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_005",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.044469,
+      "time_seconds": 400.76,
+      "working_seconds": 399.69,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.044469,
+          "time_seconds": 400.763
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_006",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.022656,
+      "time_seconds": 400.99,
+      "working_seconds": 400.27,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.022656,
+          "time_seconds": 400.993
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_007",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.100827,
+      "time_seconds": 411.24,
+      "working_seconds": 410.46,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.100827,
+          "time_seconds": 411.239
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_008",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.029114,
+      "time_seconds": 421.47,
+      "working_seconds": 410.62,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.0291135,
+          "time_seconds": 421.474
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_009",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.012769,
+      "time_seconds": 421.76,
+      "working_seconds": 420.49,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0127695,
+          "time_seconds": 421.765
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l01_010",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.01098,
+      "time_seconds": 422.01,
+      "working_seconds": 421.06,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.01098,
+          "time_seconds": 422.013
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_001",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.029885,
+      "time_seconds": 422.02,
+      "working_seconds": 411.02,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0298845,
+          "time_seconds": 422.019
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_002",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.024941,
+      "time_seconds": 422.24,
+      "working_seconds": 421.12,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0249405,
+          "time_seconds": 422.243
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_003",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.050727,
+      "time_seconds": 432.58,
+      "working_seconds": 421.49,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.050727,
+          "time_seconds": 432.583
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_004",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.050806,
+      "time_seconds": 432.91,
+      "working_seconds": 431.68,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0508065,
+          "time_seconds": 432.912
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_005",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.015562,
+      "time_seconds": 443.16,
+      "working_seconds": 441.96,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.0155625,
+          "time_seconds": 443.161
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_006",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.020931,
+      "time_seconds": 443.5,
+      "working_seconds": 442.26,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 100.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.020931,
+          "time_seconds": 443.495
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_007",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.033184,
+      "time_seconds": 443.74,
+      "working_seconds": 432.45,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0331845,
+          "time_seconds": 443.743
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_008",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.027504,
+      "time_seconds": 443.75,
+      "working_seconds": 432.41,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.027504,
+          "time_seconds": 443.749
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_009",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 95.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.037662,
+      "time_seconds": 445.29,
+      "working_seconds": 443.84,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 95.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.037662,
+          "time_seconds": 445.289
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l02_010",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.043685,
+      "time_seconds": 445.52,
+      "working_seconds": 444.07,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0436845,
+          "time_seconds": 445.521
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_001",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.018913,
+      "time_seconds": 455.76,
+      "working_seconds": 454.49,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0189135,
+          "time_seconds": 455.756
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_002",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.055188,
+      "time_seconds": 456.03,
+      "working_seconds": 454.5,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.055188,
+          "time_seconds": 456.034
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_003",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.036612,
+      "time_seconds": 456.28,
+      "working_seconds": 444.58,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.036612,
+          "time_seconds": 456.28
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_004",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.007047,
+      "time_seconds": 456.28,
+      "working_seconds": 454.54,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.007047,
+          "time_seconds": 456.281
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_005",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.047445,
+      "time_seconds": 456.28,
+      "working_seconds": 444.58,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.047445,
+          "time_seconds": 456.281
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_006",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.01526,
+      "time_seconds": 456.28,
+      "working_seconds": 454.43,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0152595,
+          "time_seconds": 456.281
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_007",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.006996,
+      "time_seconds": 456.28,
+      "working_seconds": 454.47,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.006996,
+          "time_seconds": 456.281
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_008",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.032633,
+      "time_seconds": 456.28,
+      "working_seconds": 454.66,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0326325,
+          "time_seconds": 456.28
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_009",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.029793,
+      "time_seconds": 456.28,
+      "working_seconds": 453.08,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.029793,
+          "time_seconds": 456.28
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l03_010",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 100.0,
+      "abs_error_mean": 1.0,
+      "cost_usd": 0.056371,
+      "time_seconds": 456.28,
+      "working_seconds": 454.34,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 100.0,
+          "abs_error": 1.0,
+          "cost_usd": 0.0563715,
+          "time_seconds": 456.28
+        }
+      ]
+    }
+  ]
+}

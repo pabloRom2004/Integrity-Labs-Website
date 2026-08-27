@@ -1,0 +1,742 @@
+{
+  "model": "grok-4.6",
+  "model_id": "openrouter/x-ai/grok-4.6",
+  "domain": "code_trace",
+  "variant": "no_tools_confidence",
+  "scorer": "trace_with_confidence_confidence_only",
+  "n_tasks": 80,
+  "n_done": 30,
+  "n_excluded": 0,
+  "n_unfinished": 50,
+  "mean_score": null,
+  "mean_confidence": 61.5333,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.161496,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 210.08,
+  "avg_time_seconds": 7.0,
+  "tasks": [
+    {
+      "id": "code_trace_l01_001",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 70.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00378,
+      "time_seconds": 6.54,
+      "working_seconds": 6.18,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 70.0,
+          "abs_error": null,
+          "cost_usd": 0.00378,
+          "time_seconds": 6.538
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_002",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 75.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00442,
+      "time_seconds": 4.99,
+      "working_seconds": 4.62,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 75.0,
+          "abs_error": null,
+          "cost_usd": 0.00442,
+          "time_seconds": 4.985
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_003",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 80.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005216,
+      "time_seconds": 6.08,
+      "working_seconds": 5.71,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 80.0,
+          "abs_error": null,
+          "cost_usd": 0.005216,
+          "time_seconds": 6.075
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_004",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 70.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004734,
+      "time_seconds": 6.47,
+      "working_seconds": 6.11,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 70.0,
+          "abs_error": null,
+          "cost_usd": 0.004734,
+          "time_seconds": 6.471
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_005",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 78.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005926,
+      "time_seconds": 8.49,
+      "working_seconds": 8.13,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 78.0,
+          "abs_error": null,
+          "cost_usd": 0.005926,
+          "time_seconds": 8.492
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_006",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 85.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004984,
+      "time_seconds": 6.07,
+      "working_seconds": 5.71,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 85.0,
+          "abs_error": null,
+          "cost_usd": 0.004984,
+          "time_seconds": 6.074
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_007",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 70.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004106,
+      "time_seconds": 5.85,
+      "working_seconds": 5.49,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 70.0,
+          "abs_error": null,
+          "cost_usd": 0.004106,
+          "time_seconds": 5.847
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_008",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 85.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004116,
+      "time_seconds": 6.03,
+      "working_seconds": 5.67,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 85.0,
+          "abs_error": null,
+          "cost_usd": 0.004116,
+          "time_seconds": 6.027
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_009",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 85.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004556,
+      "time_seconds": 6.35,
+      "working_seconds": 5.99,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 85.0,
+          "abs_error": null,
+          "cost_usd": 0.004556,
+          "time_seconds": 6.347
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l01_010",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 85.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004734,
+      "time_seconds": 5.24,
+      "working_seconds": 4.88,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 85.0,
+          "abs_error": null,
+          "cost_usd": 0.004734,
+          "time_seconds": 5.243
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_001",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005426,
+      "time_seconds": 5.89,
+      "working_seconds": 5.53,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.005426,
+          "time_seconds": 5.888
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_002",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005596,
+      "time_seconds": 4.82,
+      "working_seconds": 4.46,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.005596,
+          "time_seconds": 4.824
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_003",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00547,
+      "time_seconds": 4.99,
+      "working_seconds": 4.63,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.00547,
+          "time_seconds": 4.989
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_004",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005602,
+      "time_seconds": 5.13,
+      "working_seconds": 4.77,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.005602,
+          "time_seconds": 5.127
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_005",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 45.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006262,
+      "time_seconds": 7.53,
+      "working_seconds": 7.17,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 45.0,
+          "abs_error": null,
+          "cost_usd": 0.006262,
+          "time_seconds": 7.531
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_006",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004172,
+      "time_seconds": 5.24,
+      "working_seconds": 4.88,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.004172,
+          "time_seconds": 5.24
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_007",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005644,
+      "time_seconds": 5.62,
+      "working_seconds": 5.25,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.005644,
+          "time_seconds": 5.616
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_008",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006418,
+      "time_seconds": 7.45,
+      "working_seconds": 7.09,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.006418,
+          "time_seconds": 7.45
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_009",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005248,
+      "time_seconds": 4.73,
+      "working_seconds": 4.33,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.005248,
+          "time_seconds": 4.729
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l02_010",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005378,
+      "time_seconds": 4.96,
+      "working_seconds": 4.6,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.005378,
+          "time_seconds": 4.96
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_001",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 40.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006414,
+      "time_seconds": 10.59,
+      "working_seconds": 5.87,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 40.0,
+          "abs_error": null,
+          "cost_usd": 0.006414,
+          "time_seconds": 10.586
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_002",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 35.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006014,
+      "time_seconds": 9.97,
+      "working_seconds": 5.17,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 35.0,
+          "abs_error": null,
+          "cost_usd": 0.006014,
+          "time_seconds": 9.972
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_003",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005538,
+      "time_seconds": 13.73,
+      "working_seconds": 8.79,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.005538,
+          "time_seconds": 13.729
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_004",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 42.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006476,
+      "time_seconds": 12.28,
+      "working_seconds": 7.33,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 42.0,
+          "abs_error": null,
+          "cost_usd": 0.006476,
+          "time_seconds": 12.282
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_005",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 45.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006778,
+      "time_seconds": 12.85,
+      "working_seconds": 7.88,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 45.0,
+          "abs_error": null,
+          "cost_usd": 0.006778,
+          "time_seconds": 12.854
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_006",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 62.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.006206,
+      "time_seconds": 7.49,
+      "working_seconds": 7.17,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 62.0,
+          "abs_error": null,
+          "cost_usd": 0.006206,
+          "time_seconds": 7.485
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_007",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005942,
+      "time_seconds": 5.7,
+      "working_seconds": 5.29,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.005942,
+          "time_seconds": 5.701
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_008",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 42.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005762,
+      "time_seconds": 4.7,
+      "working_seconds": 4.43,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 42.0,
+          "abs_error": null,
+          "cost_usd": 0.005762,
+          "time_seconds": 4.697
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_009",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 42.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.005774,
+      "time_seconds": 9.16,
+      "working_seconds": 8.53,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 42.0,
+          "abs_error": null,
+          "cost_usd": 0.005774,
+          "time_seconds": 9.16
+        }
+      ]
+    },
+    {
+      "id": "code_trace_l03_010",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 55.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.004804,
+      "time_seconds": 5.14,
+      "working_seconds": 4.29,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 55.0,
+          "abs_error": null,
+          "cost_usd": 0.004804,
+          "time_seconds": 5.141
+        }
+      ]
+    }
+  ]
+}

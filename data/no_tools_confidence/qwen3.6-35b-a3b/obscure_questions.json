@@ -1,0 +1,742 @@
+{
+  "model": "qwen3.6-35b-a3b",
+  "model_id": "openrouter/qwen/qwen3.6-35b-a3b",
+  "domain": "obscure_questions",
+  "variant": "no_tools_confidence",
+  "scorer": "qa_with_confidence_confidence_only",
+  "n_tasks": 80,
+  "n_done": 30,
+  "n_excluded": 0,
+  "n_unfinished": 50,
+  "mean_score": null,
+  "mean_confidence": 16.3667,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.039399,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 441.8,
+  "avg_time_seconds": 14.73,
+  "tasks": [
+    {
+      "id": "obscure_questions_scaled_l01_001",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000492,
+      "time_seconds": 5.48,
+      "working_seconds": 4.98,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.00049162,
+          "time_seconds": 5.483
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_002",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000296,
+      "time_seconds": 3.74,
+      "working_seconds": 3.73,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00029648,
+          "time_seconds": 3.742
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_003",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 15.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.0005,
+      "time_seconds": 7.16,
+      "working_seconds": 7.15,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 15.0,
+          "abs_error": null,
+          "cost_usd": 0.0004999,
+          "time_seconds": 7.164
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_004",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000249,
+      "time_seconds": 2.44,
+      "working_seconds": 2.02,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00024892,
+          "time_seconds": 2.438
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_005",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000413,
+      "time_seconds": 6.57,
+      "working_seconds": 6.56,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.00041334000000000005,
+          "time_seconds": 6.573
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_006",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000844,
+      "time_seconds": 12.54,
+      "working_seconds": 12.52,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.00084448,
+          "time_seconds": 12.544
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_007",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 0.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000108,
+      "time_seconds": 1.66,
+      "working_seconds": 1.65,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 0.0,
+          "abs_error": null,
+          "cost_usd": 0.00010792,
+          "time_seconds": 1.664
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_008",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00026,
+      "time_seconds": 4.67,
+      "working_seconds": 4.65,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00026034,
+          "time_seconds": 4.667
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_009",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 30.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000274,
+      "time_seconds": 4.8,
+      "working_seconds": 4.78,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 30.0,
+          "abs_error": null,
+          "cost_usd": 0.0002742,
+          "time_seconds": 4.801
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l01_010",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000414,
+      "time_seconds": 6.13,
+      "working_seconds": 6.11,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00041406,
+          "time_seconds": 6.127
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_001",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 50.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003761,
+      "time_seconds": 27.73,
+      "working_seconds": 27.71,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 50.0,
+          "abs_error": null,
+          "cost_usd": 0.00376108,
+          "time_seconds": 27.731
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_002",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001342,
+      "time_seconds": 20.91,
+      "working_seconds": 20.89,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00134226,
+          "time_seconds": 20.91
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_003",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 0.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000856,
+      "time_seconds": 12.55,
+      "working_seconds": 12.53,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 0.0,
+          "abs_error": null,
+          "cost_usd": 0.00085552,
+          "time_seconds": 12.552
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_004",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 0.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000622,
+      "time_seconds": 9.02,
+      "working_seconds": 9.0,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 0.0,
+          "abs_error": null,
+          "cost_usd": 0.0006219800000000001,
+          "time_seconds": 9.024
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_005",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 5.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000725,
+      "time_seconds": 7.84,
+      "working_seconds": 7.82,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 5.0,
+          "abs_error": null,
+          "cost_usd": 0.0007249400000000001,
+          "time_seconds": 7.845
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_006",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000736,
+      "time_seconds": 4.66,
+      "working_seconds": 4.64,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.0007358400000000001,
+          "time_seconds": 4.663
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_007",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 25.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002225,
+      "time_seconds": 37.18,
+      "working_seconds": 37.15,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 25.0,
+          "abs_error": null,
+          "cost_usd": 0.00222478,
+          "time_seconds": 37.177
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_008",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 35.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000599,
+      "time_seconds": 3.63,
+      "working_seconds": 3.6,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 35.0,
+          "abs_error": null,
+          "cost_usd": 0.00059908,
+          "time_seconds": 3.63
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_009",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 5.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000898,
+      "time_seconds": 12.71,
+      "working_seconds": 12.69,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 5.0,
+          "abs_error": null,
+          "cost_usd": 0.00089828,
+          "time_seconds": 12.709
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l02_010",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002335,
+      "time_seconds": 13.37,
+      "working_seconds": 13.35,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00233464,
+          "time_seconds": 13.372
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_001",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.007391,
+      "time_seconds": 66.21,
+      "working_seconds": 64.54,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00739112,
+          "time_seconds": 66.208
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_002",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 15.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001994,
+      "time_seconds": 16.19,
+      "working_seconds": 13.77,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 15.0,
+          "abs_error": null,
+          "cost_usd": 0.00199438,
+          "time_seconds": 16.187
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_003",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 0.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001009,
+      "time_seconds": 23.03,
+      "working_seconds": 19.41,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 0.0,
+          "abs_error": null,
+          "cost_usd": 0.0010088200000000001,
+          "time_seconds": 23.027
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_004",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00069,
+      "time_seconds": 12.81,
+      "working_seconds": 9.1,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.00069018,
+          "time_seconds": 12.814
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_005",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 60.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001266,
+      "time_seconds": 27.28,
+      "working_seconds": 22.63,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 60.0,
+          "abs_error": null,
+          "cost_usd": 0.0012656199999999999,
+          "time_seconds": 27.28
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_006",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 20.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001709,
+      "time_seconds": 16.1,
+      "working_seconds": 13.11,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 20.0,
+          "abs_error": null,
+          "cost_usd": 0.00170886,
+          "time_seconds": 16.101
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_007",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 1.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.000621,
+      "time_seconds": 7.64,
+      "working_seconds": 5.29,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 1.0,
+          "abs_error": null,
+          "cost_usd": 0.0006206,
+          "time_seconds": 7.644
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_008",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001145,
+      "time_seconds": 17.8,
+      "working_seconds": 15.97,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.00114506,
+          "time_seconds": 17.798
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_009",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 10.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.003887,
+      "time_seconds": 34.23,
+      "working_seconds": 31.84,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 10.0,
+          "abs_error": null,
+          "cost_usd": 0.0038875,
+          "time_seconds": 34.227
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_010",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 50.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.001738,
+      "time_seconds": 15.72,
+      "working_seconds": 13.83,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 50.0,
+          "abs_error": null,
+          "cost_usd": 0.00173766,
+          "time_seconds": 15.724
+        }
+      ]
+    }
+  ]
+}

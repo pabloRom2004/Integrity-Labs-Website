@@ -1,0 +1,742 @@
+{
+  "model": "muse-glimmer-30b",
+  "model_id": "openrouter/meta/muse-glimmer-30b",
+  "domain": "object_counting",
+  "variant": "no_tools_confidence",
+  "scorer": "count_with_confidence_confidence_only",
+  "n_tasks": 80,
+  "n_done": 30,
+  "n_excluded": 0,
+  "n_unfinished": 50,
+  "mean_score": null,
+  "mean_confidence": 82.4667,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.063593,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 422.61,
+  "avg_time_seconds": 14.09,
+  "tasks": [
+    {
+      "id": "object_counting_l01_001",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002213,
+      "time_seconds": 4.95,
+      "working_seconds": 4.63,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00221348,
+          "time_seconds": 4.946
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_002",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 92.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002153,
+      "time_seconds": 14.79,
+      "working_seconds": 14.47,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 92.0,
+          "abs_error": null,
+          "cost_usd": 0.00215326,
+          "time_seconds": 14.793
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_003",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002099,
+      "time_seconds": 14.37,
+      "working_seconds": 14.05,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.0020992600000000004,
+          "time_seconds": 14.365
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_004",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 92.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002161,
+      "time_seconds": 16.77,
+      "working_seconds": 16.45,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 92.0,
+          "abs_error": null,
+          "cost_usd": 0.0021607600000000003,
+          "time_seconds": 16.769
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_005",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002171,
+      "time_seconds": 16.82,
+      "working_seconds": 16.5,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.0021712600000000004,
+          "time_seconds": 16.815
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_006",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002077,
+      "time_seconds": 8.47,
+      "working_seconds": 8.12,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00207698,
+          "time_seconds": 8.475
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_007",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002122,
+      "time_seconds": 14.56,
+      "working_seconds": 14.24,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.0021217600000000003,
+          "time_seconds": 14.561
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_008",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002098,
+      "time_seconds": 11.29,
+      "working_seconds": 10.97,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00209776,
+          "time_seconds": 11.292
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_009",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002182,
+      "time_seconds": 15.19,
+      "working_seconds": 14.87,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00218176,
+          "time_seconds": 15.188
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l01_010",
+      "difficulty": 1,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 95.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002129,
+      "time_seconds": 14.55,
+      "working_seconds": 14.22,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 95.0,
+          "abs_error": null,
+          "cost_usd": 0.00212926,
+          "time_seconds": 14.546
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_001",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 88.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002077,
+      "time_seconds": 4.35,
+      "working_seconds": 3.99,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 88.0,
+          "abs_error": null,
+          "cost_usd": 0.0020767600000000004,
+          "time_seconds": 4.348
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_002",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 92.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002114,
+      "time_seconds": 14.55,
+      "working_seconds": 14.22,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 92.0,
+          "abs_error": null,
+          "cost_usd": 0.00211426,
+          "time_seconds": 14.547
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_003",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 90.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002153,
+      "time_seconds": 14.85,
+      "working_seconds": 14.53,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 90.0,
+          "abs_error": null,
+          "cost_usd": 0.00215326,
+          "time_seconds": 14.852
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_004",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 80.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00211,
+      "time_seconds": 16.11,
+      "working_seconds": 15.78,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 80.0,
+          "abs_error": null,
+          "cost_usd": 0.00210976,
+          "time_seconds": 16.108
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_005",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 88.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002191,
+      "time_seconds": 16.93,
+      "working_seconds": 16.6,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 88.0,
+          "abs_error": null,
+          "cost_usd": 0.0021907600000000004,
+          "time_seconds": 16.934
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_006",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 88.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002227,
+      "time_seconds": 15.24,
+      "working_seconds": 14.91,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 88.0,
+          "abs_error": null,
+          "cost_usd": 0.0022267600000000004,
+          "time_seconds": 15.243
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_007",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 90.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002155,
+      "time_seconds": 14.85,
+      "working_seconds": 14.51,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 90.0,
+          "abs_error": null,
+          "cost_usd": 0.0021547600000000004,
+          "time_seconds": 14.845
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_008",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 85.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00211,
+      "time_seconds": 14.44,
+      "working_seconds": 14.1,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 85.0,
+          "abs_error": null,
+          "cost_usd": 0.00210976,
+          "time_seconds": 14.437
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_009",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 92.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002054,
+      "time_seconds": 14.05,
+      "working_seconds": 13.71,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 92.0,
+          "abs_error": null,
+          "cost_usd": 0.0020542599999999996,
+          "time_seconds": 14.051
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l02_010",
+      "difficulty": 2,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 92.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002057,
+      "time_seconds": 15.49,
+      "working_seconds": 15.15,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 92.0,
+          "abs_error": null,
+          "cost_usd": 0.0020572600000000004,
+          "time_seconds": 15.487
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_001",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 60.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002176,
+      "time_seconds": 4.38,
+      "working_seconds": 4.06,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 60.0,
+          "abs_error": null,
+          "cost_usd": 0.0021761999999999997,
+          "time_seconds": 4.381
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_002",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002093,
+      "time_seconds": 15.85,
+      "working_seconds": 15.51,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.0020932600000000004,
+          "time_seconds": 15.852
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_003",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 45.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002065,
+      "time_seconds": 15.57,
+      "working_seconds": 15.23,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 45.0,
+          "abs_error": null,
+          "cost_usd": 0.00206476,
+          "time_seconds": 15.573
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_004",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002108,
+      "time_seconds": 15.98,
+      "working_seconds": 7.55,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.0021082600000000003,
+          "time_seconds": 15.977
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_005",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 70.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002065,
+      "time_seconds": 15.64,
+      "working_seconds": 4.41,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 70.0,
+          "abs_error": null,
+          "cost_usd": 0.00206476,
+          "time_seconds": 15.638
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_006",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002107,
+      "time_seconds": 18.54,
+      "working_seconds": 4.53,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.00210676,
+          "time_seconds": 18.544
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_007",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002072,
+      "time_seconds": 21.23,
+      "working_seconds": 6.94,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.0020722600000000002,
+          "time_seconds": 21.234
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_008",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 65.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002092,
+      "time_seconds": 21.48,
+      "working_seconds": 7.08,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 65.0,
+          "abs_error": null,
+          "cost_usd": 0.0020917600000000002,
+          "time_seconds": 21.483
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_009",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 70.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.00209,
+      "time_seconds": 13.06,
+      "working_seconds": 7.01,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 70.0,
+          "abs_error": null,
+          "cost_usd": 0.00209026,
+          "time_seconds": 13.057
+        }
+      ]
+    },
+    {
+      "id": "object_counting_l03_010",
+      "difficulty": 3,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": null,
+      "n_correct": null,
+      "confidence_mean": 75.0,
+      "abs_error_mean": null,
+      "cost_usd": 0.002072,
+      "time_seconds": 8.26,
+      "working_seconds": 5.02,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": null,
+          "confidence": 75.0,
+          "abs_error": null,
+          "cost_usd": 0.0020722600000000002,
+          "time_seconds": 8.26
+        }
+      ]
+    }
+  ]
+}

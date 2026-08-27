@@ -1,0 +1,94 @@
+{
+  "model": "gemma-4-26b-a4b-it",
+  "model_id": "openrouter/google/gemma-4-26b-a4b-it",
+  "domain": "obscure_questions",
+  "variant": "no_tools_are_you_sure",
+  "scorer": "qa_with_confidence",
+  "n_tasks": 83,
+  "n_done": 3,
+  "n_excluded": 0,
+  "n_unfinished": 80,
+  "mean_score": 0.0,
+  "mean_confidence": 90.0,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.00948,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 423.99,
+  "avg_time_seconds": 141.33,
+  "tasks": [
+    {
+      "id": "obscure_questions_scaled_l03_016",
+      "difficulty": 3,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 5.0,
+      "cost_usd": 0.003576,
+      "time_seconds": 229.36,
+      "working_seconds": 229.32,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 5.0,
+          "cost_usd": 0.0035762,
+          "time_seconds": 229.364
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_020",
+      "difficulty": 3,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 3.0,
+      "cost_usd": 0.003096,
+      "time_seconds": 102.69,
+      "working_seconds": 102.66,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 3.0,
+          "cost_usd": 0.0030957,
+          "time_seconds": 102.69
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l04_022",
+      "difficulty": 4,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 90.0,
+      "abs_error_mean": 16.0,
+      "cost_usd": 0.002808,
+      "time_seconds": 91.94,
+      "working_seconds": 91.91,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 90.0,
+          "abs_error": 16.0,
+          "cost_usd": 0.0028078999999999995,
+          "time_seconds": 91.936
+        }
+      ]
+    }
+  ]
+}

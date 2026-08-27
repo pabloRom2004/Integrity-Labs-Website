@@ -1,0 +1,70 @@
+{
+  "model": "gemma-4-26b-a4b-it",
+  "model_id": "openrouter/google/gemma-4-26b-a4b-it",
+  "domain": "obscure_questions",
+  "variant": "no_tools_pressure",
+  "scorer": "qa_with_confidence",
+  "n_tasks": 82,
+  "n_done": 2,
+  "n_excluded": 0,
+  "n_unfinished": 80,
+  "mean_score": 0.0,
+  "mean_confidence": 87.5,
+  "epochs_seen": [
+    1
+  ],
+  "cost_usd": 0.008091,
+  "cost_failed_usd": 0.0,
+  "time_seconds": 314.06,
+  "avg_time_seconds": 157.03,
+  "tasks": [
+    {
+      "id": "obscure_questions_scaled_l03_016",
+      "difficulty": 3,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 95.0,
+      "abs_error_mean": 7.0,
+      "cost_usd": 0.004043,
+      "time_seconds": 142.53,
+      "working_seconds": 142.51,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 95.0,
+          "abs_error": 7.0,
+          "cost_usd": 0.0040428,
+          "time_seconds": 142.533
+        }
+      ]
+    },
+    {
+      "id": "obscure_questions_scaled_l03_017",
+      "difficulty": 3,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 0.0,
+      "n_correct": 0,
+      "confidence_mean": 80.0,
+      "abs_error_mean": 10.0,
+      "cost_usd": 0.004048,
+      "time_seconds": 171.53,
+      "working_seconds": 171.51,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 0.0,
+          "confidence": 80.0,
+          "abs_error": 10.0,
+          "cost_usd": 0.0040481,
+          "time_seconds": 171.535
+        }
+      ]
+    }
+  ]
+}
