@@ -318,7 +318,8 @@ window.Table = (() => {
         : `<span class="gap-help m-row-help" data-i="${i}" tabindex="0" role="button" aria-label="Cost and time details">?</span>`;
       const helpCell = `<td class="m-help-cell">${rowHelp}</td>`;
       // Reasoning effort is no longer a label under the name — it lives in the row's "?" hover.
-      const name = `<td class="m-cell"><span class="m-rank">${rankOf(r)}</span><span class="dot" style="background:${r.color}"></span><span class="m-name">${r.display}</span>${ico}${warn}</td>`;
+      const newTag = r.isNew ? '<div class="m-new-row"><span class="m-new">New</span></div>' : '';
+      const name = `<td class="m-cell"><span class="m-rank">${rankOf(r)}</span><span class="dot" style="background:${r.color}"></span><span class="m-name">${r.display}</span>${ico}${newTag}${warn}</td>`;
       // Per-domain, an extrapolated model is too noisy (or absent) to report — same message
       // whether it has a handful of samples or none at all.
       if (r.extrapolated && st.domain !== 'overall')

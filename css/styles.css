@@ -21,6 +21,8 @@
   --acc:    #3E8E84;   /* accuracy bar */
   --conf:   #E8A04A;   /* confidence bar */
   --neutral:#B9AB98;
+  --new-bg:   #4D4D4D;   /* neutral dark grey, the New badge */
+  --new-text: #FFFFFF;   /* white text on it */
 
   --radius:   16px;
   --radius-sm:10px;
@@ -890,3 +892,29 @@ h4.abl-sub {
 /* ±1 SE error bars (the bar view's Show error bars toggle) */
 .lp-errbar { stroke: var(--ink); stroke-width: 1.4; opacity: .55; }
 
+
+/* "New" badge under a recently released model's name (roster flag from the export,
+   so the baked table and table.js always agree). Horizontal pill, dark on white. */
+/* The name cell is a nowrap flex row, so the badge rides on the same line as the name. */
+.cal-table .m-new-row {
+  display: inline-block;
+  margin-left: 8px;
+  line-height: 1;
+}
+.cal-table .m-new {
+  display: inline-block;
+  background: var(--new-bg, #4D4D4D);
+  color: var(--new-text, #FFFFFF);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* "New" pill drawn inside the bar chart SVG (mirrors the table badge) */
+.lp-new-box { fill: var(--new-bg, #4D4D4D); }
+.lp-new-text { fill: var(--new-text, #FFFFFF); font-size: 6.8px; font-weight: 800; letter-spacing: .04em; }

@@ -18,7 +18,7 @@ window.TimePlot = (() => {
   // exclEst (model-size axis only, default off = estimates included): hide models whose
   // size is a community estimate rather than an official published figure.
   const st = { x: 'date', legacy: false, all: false, order: 'brier', view: 'bar', errbars: false, exclEst: false };
-  const TOP_N = 21;
+  const TOP_N = 22;
   let wired = false;
 
   // slug -> release date (announcement / public availability), verified 2026-07-25
@@ -34,6 +34,7 @@ window.TimePlot = (() => {
     'claude-opus-4-8':        '2026-05-28',
     'claude-fable-5':         '2026-06-09',
     'glm-5.2':                '2026-06-13',
+    'glm-5.3-flash':          '2026-08-26',
     'claude-sonnet-5':        '2026-06-30',
     'grok-4.5':               '2026-07-08',
     'grok-4.6':               '2026-08-12',
@@ -158,6 +159,17 @@ window.TimePlot = (() => {
     return out.filter(d => d.getTime() >= t0);
   }
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  /* The "New" pill drawn on the bar chart: a dark rounded rect + white text, centred on cx
+     with its MIDDLE at yMid. Mirrors the table's .m-new badge and bake_chart's version. */
+  function newBadge(cx, yMid) {
+    const w = 24, h = 10.5;   // 20% smaller than the table badge
+    const g = el('g', { class: 'lp-new' });
+    g.appendChild(el('rect', { x: cx - w / 2, y: yMid - h / 2, width: w, height: h, rx: 4,
+      class: 'lp-new-box' }));
+    g.appendChild(el('text', { x: cx, y: yMid + 2.9, 'text-anchor': 'middle', class: 'lp-new-text' }, 'NEW'));
+    return g;
+  }
 
   /* ---- render ---- */
   async function render() {
@@ -321,6 +333,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'glm-5.3-flash':      'The provider ended the stream without an answer whenever it reasoned for a long time, so the missing questions are the hardest ones.',
         'qwen3.6-35b-a3b':    'Some questions returned no parseable answer.',
         'gpt-3.5-turbo':      'A few questions returned no parseable answer.',
       };
@@ -408,6 +421,18 @@ window.TimePlot = (() => {
           x: cx, y: v >= 0 ? Y(v + labelEdge) - 7 : Y(v - labelEdge) + 15,
           class: 'lp-bar-value', 'text-anchor': 'middle',
         }, accOrder ? Math.round(p.accuracy ?? 0) + '%' : v.toFixed(1)));
+        // "New" pill: above the percentage on the accuracy axis; on the Integrity axis just
+        // past the zero line on the side the bar does NOT occupy.
+        if (p.isNew) {
+          // sits with the score, just beyond it on the side away from the bar, so it never
+          // overlaps either the bar or the number itself
+          // the accuracy axis gets a wider gap between the % and the pill than the
+          // Integrity axis, where the numbers are shorter and sit tighter to the bar
+          const yMid = accOrder
+            ? Y(v + labelEdge) - 30
+            : (v >= 0 ? Y(v + labelEdge) - 20 : Y(v - labelEdge) + 27);
+          svg.appendChild(newBadge(cx, yMid));
+        }
         // an invisible hit area carries the tooltip: the bar PLUS its value label — it
         // extends only on the side the number sits (past the error bar when shown), so even
         // a sliver of a bar near zero is easy to hover
