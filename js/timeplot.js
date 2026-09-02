@@ -33,6 +33,7 @@ window.TimePlot = (() => {
     'gemini-3.5-flash':       '2026-05-19',
     'claude-opus-4-8':        '2026-05-28',
     'claude-fable-5':         '2026-06-09',
+    'claude-fable-5-1':       '2026-08-28',
     'glm-5.2':                '2026-06-13',
     'glm-5.3-flash':          '2026-08-26',
     'claude-sonnet-5':        '2026-06-30',
@@ -428,9 +429,12 @@ window.TimePlot = (() => {
           // overlaps either the bar or the number itself
           // the accuracy axis gets a wider gap between the % and the pill than the
           // Integrity axis, where the numbers are shorter and sit tighter to the bar
+          // Integrity axis: a positive bar carries its number above it, so the pill goes
+          // BELOW the bar, just under the zero line; a negative bar keeps the pill beyond
+          // its number. Accuracy axis: above the percentage.
           const yMid = accOrder
             ? Y(v + labelEdge) - 30
-            : (v >= 0 ? Y(v + labelEdge) - 20 : Y(v - labelEdge) + 27);
+            : (v >= 0 ? Y(0) + 9.5 : Y(v - labelEdge) + 27);
           svg.appendChild(newBadge(cx, yMid));
         }
         // an invisible hit area carries the tooltip: the bar PLUS its value label — it

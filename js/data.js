@@ -19,6 +19,7 @@ const Data = (() => {
   // Prettier model labels than the auto title-case in the export.
   const DISPLAY_OVERRIDE = {
     'claude-fable-5':        'Claude Fable 5',
+    'claude-fable-5-1':      'Claude Fable 5.1',
     'claude-opus-4-8':       'Claude Opus 4.8',
     'claude-opus-5':         'Claude Opus 5',
     'claude-sonnet-4-6':     'Claude Sonnet 4.6',
