@@ -44,6 +44,7 @@ window.TimePlot = (() => {
     'gpt-5.6-sol':            '2026-07-09',
     'muse-spark-1.1':         '2026-07-09',
   'muse-spark-1.2': '2026-08-05',
+  'muse-spark-1.3': '2026-09-02',
     'muse-glimmer-30b':       '2026-08-10',
     'inkling':                '2026-07-15',
     'kimi-k3':                '2026-07-16',   // launch; open weights followed 2026-07-26
@@ -82,6 +83,7 @@ window.TimePlot = (() => {
     'grok-4.6':               { t: 1500,  a: null, c: 'community estimate' },  // same V9 base as 4.5 (gains are post-training, not scale)
     'muse-spark-1.1':         { t: 1000,  a: 40,   c: 'speculative guess' },   // Meta discloses nothing; open-flagship-class MoE guess from pricing
     'muse-spark-1.2':         { t: 1000,  a: 40,   c: 'speculative guess' },   // same base as 1.1 (coding-focused update, same pricing)
+    'muse-spark-1.3':         { t: 1000,  a: 40,   c: 'speculative guess' },   // same pricing as 1.2 again; Meta discloses nothing
     'muse-glimmer-30b':       { t: 29.6,  a: null, c: 'official' },            // HF card: dense, incl. ~1.8B vision encoder
     'inkling':                { t: 975,   a: 41,   c: 'official' },            // Thinking Machines model card
   };
@@ -331,6 +333,7 @@ window.TimePlot = (() => {
         'kimi-k3':            'Some answers never arrived (dropped provider streams).',
         'muse-spark-1.1':     'A few answers never arrived (hung provider streams).',
         'muse-spark-1.2':     'Some answers never arrived (hung provider streams).',
+        'muse-spark-1.3':     'Some answers never arrived (hung provider streams).',
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',

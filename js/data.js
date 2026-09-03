@@ -41,6 +41,7 @@ const Data = (() => {
     'grok-4.6':              'Grok 4.6',
     'muse-spark-1.1':        'Muse Spark 1.1',
     'muse-spark-1.2':        'Muse Spark 1.2',
+    'muse-spark-1.3':        'Muse Spark 1.3',
     'muse-glimmer-30b':      'Muse Glimmer 30B',
     'gpt-3.5-turbo':         'GPT-3.5 Turbo',
     'gpt-4o':                'GPT-4o',
