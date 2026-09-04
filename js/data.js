@@ -47,6 +47,7 @@ const Data = (() => {
     'gpt-4o':                'GPT-4o',
     'gemini-3.6-flash':      'Gemini 3.6 Flash',
     'gemini-3.7-flash':      'Gemini 3.7 Flash',
+    'gemini-3.8-flash':      'Gemini 3.8 Flash',
   };
 
   async function load() {

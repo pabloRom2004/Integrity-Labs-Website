@@ -50,6 +50,7 @@ window.TimePlot = (() => {
     'kimi-k3':                '2026-07-16',   // launch; open weights followed 2026-07-26
     'gemini-3.6-flash':       '2026-07-21',
     'gemini-3.7-flash':       '2026-08-13',
+    'gemini-3.8-flash':       '2026-09-02',
     'claude-opus-5':          '2026-07-24',
   };
   const LEGACY_CUTOFF = new Date('2026-01-01');
@@ -74,6 +75,7 @@ window.TimePlot = (() => {
     'gemini-3.5-flash':       { t: 275,   a: 13,   c: 'community estimate' },  // TPU memory/throughput calc (250-300B / 10-16B), widely reported
     'gemini-3.6-flash':       { t: 275,   a: 13,   c: 'speculative guess' },   // model card says based on 3.5 Flash; its estimate carried forward
     'gemini-3.7-flash':       { t: 275,   a: 13,   c: 'speculative guess' },   // model card says based on 3.6 Flash; same base assumed
+    'gemini-3.8-flash':       { t: 275,   a: 13,   c: 'speculative guess' },   // same pricing as 3.7 Flash; same base assumed
     'gemma-4-26b-a4b-it':     { t: 25.2,  a: 3.8,  c: 'official' },            // Google model card
     'deepseek-v4-pro':        { t: 1600,  a: 49,   c: 'official' },            // HF model card
     'glm-5.2':                { t: 744,   a: 40,   c: 'official' },            // Z.ai figure (HF safetensors counts 753B)
