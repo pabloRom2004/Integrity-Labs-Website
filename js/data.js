@@ -35,6 +35,7 @@ const Data = (() => {
     'gpt-5.6-luna':          'GPT-5.6 Luna',
     'gpt-5.6-terra':         'GPT-5.6 Terra',
     'gpt-5.6-sol':           'GPT-5.6 Sol',
+    'gpt-6-astra':           'GPT-6 Astra',
     'qwen3.6-35b-a3b':       'Qwen 3.6',
     'gemma-4-26b-a4b-it':    'Gemma 4 26B',
     'grok-4.5':              'Grok 4.5',
