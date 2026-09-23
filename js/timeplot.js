@@ -43,6 +43,8 @@ window.TimePlot = (() => {
     'gpt-5.6-terra':          '2026-07-09',
     'gpt-5.6-sol':            '2026-07-09',
     'gpt-6-astra':            '2026-09-03',
+    'gpt-6-sol':              '2026-09-22',
+    'gpt-6-luna':             '2026-09-22',
     'muse-spark-1.1':         '2026-07-09',
   'muse-spark-1.2': '2026-08-05',
   'muse-spark-1.3': '2026-09-02',
@@ -53,6 +55,7 @@ window.TimePlot = (() => {
     'gemini-3.7-flash':       '2026-08-13',
     'gemini-3.8-flash':       '2026-09-02',
     'claude-opus-5':          '2026-07-24',
+    'claude-opus-5-5':        '2026-09-21',
   };
   const LEGACY_CUTOFF = new Date('2026-01-01');
 
@@ -340,6 +343,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'claude-opus-5-5':    "Blocked by Anthropic's safety filter on some code-tracing and string-rule questions; one thought past the output cap.",
         'gpt-6-astra':        'One answer gave its confidence in words instead of a number.',
         'glm-5.3-flash':      'The provider ended the stream without an answer whenever it reasoned for a long time, so the missing questions are the hardest ones.',
         'qwen3.6-35b-a3b':    'Some questions returned no parseable answer.',
