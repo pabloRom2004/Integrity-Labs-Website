@@ -343,6 +343,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'gpt-6-sol':          'Two code-tracing replies came back without an answer line.',
         'claude-opus-5-5':    "Blocked by Anthropic's safety filter on some code-tracing and string-rule questions; one thought past the output cap.",
         'gpt-6-astra':        'One answer gave its confidence in words instead of a number.',
         'glm-5.3-flash':      'The provider ended the stream without an answer whenever it reasoned for a long time, so the missing questions are the hardest ones.',
