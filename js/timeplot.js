@@ -171,12 +171,14 @@ window.TimePlot = (() => {
 
   /* The "New" pill drawn on the bar chart: a dark rounded rect + white text, centred on cx
      with its MIDDLE at yMid. Mirrors the table's .m-new badge and bake_chart's version. */
-  function newBadge(cx, yMid) {
-    const w = 24, h = 10.5;   // 20% smaller than the table badge
+  function newBadge(cx, yMid, k = 1) {
+    // k scales the pill with the bar slot (1 at the default line-up, smaller with more bars)
+    const w = 24 * k, h = 10.5 * k;   // 20% smaller than the table badge
     const g = el('g', { class: 'lp-new' });
-    g.appendChild(el('rect', { x: cx - w / 2, y: yMid - h / 2, width: w, height: h, rx: 4,
+    g.appendChild(el('rect', { x: cx - w / 2, y: yMid - h / 2, width: w, height: h, rx: 4 * k,
       class: 'lp-new-box' }));
-    g.appendChild(el('text', { x: cx, y: yMid + 2.9, 'text-anchor': 'middle', class: 'lp-new-text' }, 'NEW'));
+    g.appendChild(el('text', { x: cx, y: yMid + 2.9 * k, 'text-anchor': 'middle', class: 'lp-new-text',
+      style: `font-size:${(6.8 * k).toFixed(2)}px` }, 'NEW'));
     return g;
   }
 
@@ -405,6 +407,12 @@ window.TimePlot = (() => {
           : (a, b) => a.brier - b.brier);
       const slot = iw / ordered.length;
       const bw = Math.min(30, slot * 0.7);
+      // Label scale: 1 at the default TOP_N line-up, shrinking in step with the slot when
+      // "Include all models" packs more bars in (the CSS sizes are the k=1 sizes). The value
+      // font also shrinks until a typical 5-character number ("-24.3") fits its slot.
+      const k = Math.min(1, slot / (iw / TOP_N));
+      const valFont = k >= 1 ? 12 : Math.max(6.5, Math.min(12 * k, (slot - 2) / (5 * 0.62)));
+      const nameFont = Math.max(9, 12.5 * k);
       ordered.forEach((p, i) => {
         const cx = mL + slot * (i + 0.5);
         const fill = Data.providerColor(p.slug);
@@ -431,8 +439,8 @@ window.TimePlot = (() => {
         // the value label steps out of the way of the error bar when it's shown
         const labelEdge = st.errbars && se != null ? se : 0;
         svg.appendChild(el('text', {
-          x: cx, y: v >= 0 ? Y(v + labelEdge) - 7 : Y(v - labelEdge) + 15,
-          class: 'lp-bar-value', 'text-anchor': 'middle',
+          x: cx, y: v >= 0 ? Y(v + labelEdge) - 7 * k : Y(v - labelEdge) + 15 * k,
+          class: 'lp-bar-value', 'text-anchor': 'middle', style: `font-size:${valFont.toFixed(2)}px`,
         }, accOrder ? Math.round(p.accuracy ?? 0) + '%' : v.toFixed(1)));
         // "New" pill: above the percentage on the accuracy axis; on the Integrity axis just
         // past the zero line on the side the bar does NOT occupy.
@@ -445,9 +453,9 @@ window.TimePlot = (() => {
           // BELOW the bar, just under the zero line; a negative bar keeps the pill beyond
           // its number. Accuracy axis: above the percentage.
           const yMid = accOrder
-            ? Y(v + labelEdge) - 30
-            : (v >= 0 ? Y(0) + 9.5 : Y(v - labelEdge) + 27);
-          svg.appendChild(newBadge(cx, yMid));
+            ? Y(v + labelEdge) - 30 * k
+            : (v >= 0 ? Y(0) + 9.5 * k : Y(v - labelEdge) + 27 * k);
+          svg.appendChild(newBadge(cx, yMid, k));
         }
         // an invisible hit area carries the tooltip: the bar PLUS its value label — it
         // extends only on the side the number sits (past the error bar when shown), so even
@@ -478,7 +486,7 @@ window.TimePlot = (() => {
         }
         labelY += 12;   // name baseline sits under the logo
         svg.appendChild(el('text', {
-          class: 'lp-model', x: cx, y: labelY,
+          class: 'lp-model', x: cx, y: labelY, style: `font-size:${nameFont.toFixed(2)}px`,
           'text-anchor': 'end', transform: `rotate(-58 ${cx} ${labelY})`,
         }, p.display));
       });
