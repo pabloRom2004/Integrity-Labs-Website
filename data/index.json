@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T00:37:59.312292+00:00",
+  "generated_at": "2026-10-12T22:19:24.051783+00:00",
   "variants": [
     "no_tools",
     "no_tools_confidence",
@@ -11,9 +11,9 @@
     "no_tools_brier_told"
   ],
   "totals": {
-    "cost_usd": 5185.850308,
-    "time_seconds": 28036060.03,
-    "n_tasks_done": 64546,
+    "cost_usd": 5393.218172,
+    "time_seconds": 28154027.74,
+    "n_tasks_done": 66181,
     "per_model": {
       "claude-fable-5": {
         "cost_usd": 975.022031,
@@ -212,6 +212,12 @@
         "time_seconds": 107671.79,
         "n_tasks_done": 1622,
         "avg_time_seconds": 66.38
+      },
+      "muse-wonder": {
+        "cost_usd": 207.367864,
+        "time_seconds": 117967.71,
+        "n_tasks_done": 1635,
+        "avg_time_seconds": 72.15
       },
       "qwen3.6-35b-a3b": {
         "cost_usd": 7.304174,
@@ -521,7 +527,7 @@
       "arms": [
         "low"
       ],
-      "new": true,
+      "new": false,
       "note": "28 of this model's 1400 questions are not counted: 27 were blocked by Anthropic's output safety filter before any answer was returned (12 on code tracing, 11 on string rules, 4 on reasoning puzzles; never retried, as the block reproduces) and 1 reasoned past the output cap twice. Its scores cover the remaining 1372."
     },
     {
@@ -571,8 +577,25 @@
       "arms": [
         "low"
       ],
-      "new": true,
+      "new": false,
       "note": "6 of this model's 1400 questions are not counted (all hard code-tracing items): it returned a reply without the answer and confidence lines twice in a row. Its scores cover the remaining 1394."
+    },
+    {
+      "slug": "muse-wonder",
+      "model_id": "openrouter/meta/muse-wonder",
+      "display": "Muse Wonder",
+      "text_only": false,
+      "has_data": true,
+      "extrapolated": false,
+      "reasoning": {
+        "low": "low",
+        "high": "high"
+      },
+      "arms": [
+        "low"
+      ],
+      "new": true,
+      "note": "65 of this model's 1400 questions are not counted: the provider ended the response stream without an answer, mostly on the hardest chess puzzles (44), plus reasoning puzzles (14) and string rules (7), each retried once. Its scores cover the remaining 1335."
     },
     {
       "slug": "glm-5.2",
@@ -1367,6 +1390,24 @@
       "slug": "muse-spark-1.3",
       "model_id": "openrouter/meta/muse-spark-1.3",
       "display": "Muse Spark 1 3",
+      "text_only": false,
+      "domains": [
+        "3d_shapes",
+        "belief_tracking",
+        "chess_puzzles",
+        "code_trace",
+        "computer_use",
+        "object_counting",
+        "obscure_questions",
+        "reasoning_puzzles",
+        "spatial_reasoning_exp",
+        "string_rules"
+      ]
+    },
+    {
+      "slug": "muse-wonder",
+      "model_id": "openrouter/meta/muse-wonder",
+      "display": "Muse Wonder",
       "text_only": false,
       "domains": [
         "3d_shapes",
@@ -40521,6 +40562,1108 @@
           "cost_failed_usd": 0.0,
           "time_seconds": 859.46,
           "avg_time_seconds": 28.65
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      }
+    },
+    "muse-wonder": {
+      "3d_shapes": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.5071,
+          "mean_confidence": 65.5643,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 15.78783,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 12638.59,
+          "avg_time_seconds": 90.28
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 83.5667,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.517826,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 1058.51,
+          "avg_time_seconds": 35.28
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "belief_tracking": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.3643,
+          "mean_confidence": 68.1,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 23.534204,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 11899.75,
+          "avg_time_seconds": 85.0
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 22.8,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.395012,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 150.96,
+          "avg_time_seconds": 5.03
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "chess_puzzles": {
+        "no_tools": {
+          "n_tasks": 132,
+          "n_done": 96,
+          "n_excluded": 36,
+          "n_unfinished": 36,
+          "mean_score": 0.5938,
+          "mean_confidence": 76.8333,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 28.548996,
+          "cost_failed_usd": 0.733824,
+          "time_seconds": 18896.95,
+          "avg_time_seconds": 196.84
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 68.2,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.975604,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 711.81,
+          "avg_time_seconds": 23.73
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "code_trace": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.35,
+          "mean_confidence": 60.2857,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 24.270586,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 8883.83,
+          "avg_time_seconds": 63.46
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 51.0667,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.43367,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 204.72,
+          "avg_time_seconds": 6.82
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "computer_use": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.6143,
+          "mean_confidence": 85.9571,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 7.282314,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 3842.21,
+          "avg_time_seconds": 27.44
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 92.9333,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.679628,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 273.26,
+          "avg_time_seconds": 9.11
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "object_counting": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.4929,
+          "mean_confidence": 60.5786,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 6.963077,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 5505.93,
+          "avg_time_seconds": 39.33
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 52.2333,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.795021,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 802.82,
+          "avg_time_seconds": 26.76
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "obscure_questions": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.4786,
+          "mean_confidence": 30.3143,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 6.019492,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 4583.19,
+          "avg_time_seconds": 32.74
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 25.3667,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.311048,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 208.95,
+          "avg_time_seconds": 6.96
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "reasoning_puzzles": {
+        "no_tools": {
+          "n_tasks": 132,
+          "n_done": 126,
+          "n_excluded": 6,
+          "n_unfinished": 6,
+          "mean_score": 0.5952,
+          "mean_confidence": 64.4762,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 41.225501,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 21368.65,
+          "avg_time_seconds": 169.59
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 43.3333,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 1.02076,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 323.43,
+          "avg_time_seconds": 10.78
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "spatial_reasoning_exp": {
+        "no_tools": {
+          "n_tasks": 140,
+          "n_done": 140,
+          "n_excluded": 0,
+          "n_unfinished": 0,
+          "mean_score": 0.3857,
+          "mean_confidence": 66.2571,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 8.387631,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 6015.66,
+          "avg_time_seconds": 42.97
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 71.1,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.291716,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 194.99,
+          "avg_time_seconds": 6.5
+        },
+        "tools": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_confidence_high": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_are_you_sure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_pressure": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        },
+        "no_tools_brier_told": {
+          "n_tasks": 80,
+          "n_done": 0,
+          "n_excluded": 0,
+          "n_unfinished": 80,
+          "mean_score": null,
+          "mean_confidence": null,
+          "epochs_seen": [],
+          "cost_usd": 0,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 0,
+          "avg_time_seconds": null
+        }
+      },
+      "string_rules": {
+        "no_tools": {
+          "n_tasks": 137,
+          "n_done": 133,
+          "n_excluded": 4,
+          "n_unfinished": 4,
+          "mean_score": 0.5789,
+          "mean_confidence": 63.1504,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 39.2152,
+          "cost_failed_usd": 0.265244,
+          "time_seconds": 19981.75,
+          "avg_time_seconds": 150.24
+        },
+        "no_tools_confidence": {
+          "n_tasks": 80,
+          "n_done": 30,
+          "n_excluded": 0,
+          "n_unfinished": 50,
+          "mean_score": null,
+          "mean_confidence": 35.4333,
+          "epochs_seen": [
+            1
+          ],
+          "cost_usd": 0.712748,
+          "cost_failed_usd": 0.0,
+          "time_seconds": 421.75,
+          "avg_time_seconds": 14.06
         },
         "tools": {
           "n_tasks": 80,

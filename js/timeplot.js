@@ -46,6 +46,7 @@ window.TimePlot = (() => {
     'gpt-6-sol':              '2026-09-22',
     'gpt-6-luna':             '2026-09-22',
     'gpt-6.1-sol':            '2026-09-29',
+    'muse-wonder':            '2026-10-12',
     'muse-spark-1.1':         '2026-07-09',
   'muse-spark-1.2': '2026-08-05',
   'muse-spark-1.3': '2026-09-02',
@@ -91,6 +92,7 @@ window.TimePlot = (() => {
     'muse-spark-1.1':         { t: 1000,  a: 40,   c: 'speculative guess' },   // Meta discloses nothing; open-flagship-class MoE guess from pricing
     'muse-spark-1.2':         { t: 1000,  a: 40,   c: 'speculative guess' },   // same base as 1.1 (coding-focused update, same pricing)
     'muse-spark-1.3':         { t: 1000,  a: 40,   c: 'speculative guess' },   // same pricing as 1.2 again; Meta discloses nothing
+    'muse-wonder':              { t: 2000,  a: 100,  c: 'speculative guess' },   // flagship tier, priced 3x Spark; Meta discloses nothing
     'muse-glimmer-30b':       { t: 29.6,  a: null, c: 'official' },            // HF card: dense, incl. ~1.8B vision encoder
     'inkling':                { t: 975,   a: 41,   c: 'official' },            // Thinking Machines model card
   };
@@ -346,6 +348,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'muse-wonder':        'Some answers never arrived (dropped provider streams), mostly on the hardest chess puzzles.',
         'gpt-6.1-sol':        'Six code-tracing replies came back without an answer line.',
         'gpt-6-sol':          'Two code-tracing replies came back without an answer line.',
         'claude-opus-5-5':    "Blocked by Anthropic's safety filter on some code-tracing and string-rule questions; one thought past the output cap.",
