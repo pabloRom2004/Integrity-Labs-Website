@@ -47,6 +47,7 @@ window.TimePlot = (() => {
     'gpt-6-luna':             '2026-09-22',
     'gpt-6.1-sol':            '2026-09-29',
     'muse-wonder':            '2026-10-12',
+    'gemini-4-argon':         '2026-10-13',
     'muse-spark-1.1':         '2026-07-09',
   'muse-spark-1.2': '2026-08-05',
   'muse-spark-1.3': '2026-09-02',
@@ -218,7 +219,17 @@ window.TimePlot = (() => {
       pts = pts.filter(p => PARAMS[p.slug] && p.integrity >= -100
         && (!st.exclEst || PARAMS[p.slug].c === 'official'));
     pts = pts.filter(p => ax.val(p) != null).sort((a, b) => ax.val(a) - ax.val(b));
-    if (mode === 'bar' && !st.all) pts = pts.slice(0, TOP_N);   // already brier-sorted asc
+    // Default bar view: the best TOP_N by Brier, except that a New-badged model is always
+    // shown: each one below the cut takes the place of the lowest-scoring unbadged model, so
+    // the count stays TOP_N and the order stays by score. Mirrors export_site_data.bake_chart.
+    if (mode === 'bar' && !st.all) {   // pts already brier-sorted asc
+      const head = pts.slice(0, TOP_N);
+      for (const p of pts.slice(TOP_N).filter(p => p.isNew)) {
+        for (let i = head.length - 1; i >= 0; i--) if (!head[i].isNew) { head.splice(i, 1); break; }
+        head.push(p);
+      }
+      pts = head;
+    }
     if (!pts.length) { mount.innerHTML = '<div class="plot-empty">No data for this selection.</div>'; return; }
     const highBySlug = {};
     for (const p of pts) if (p.arm === 'high') highBySlug[p.slug] = p;
@@ -348,6 +359,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'gemini-4-argon':     "Three chess answers were blocked by Google's safety filter.",
         'muse-wonder':        'Some answers never arrived (dropped provider streams), mostly on the hardest chess puzzles.',
         'gpt-6.1-sol':        'Six code-tracing replies came back without an answer line.',
         'gpt-6-sol':          'Two code-tracing replies came back without an answer line.',

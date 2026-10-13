@@ -40,6 +40,7 @@ const Data = (() => {
     'gpt-6-luna':            'GPT-6 Luna',
     'gpt-6.1-sol':           'GPT-6.1 Sol',
     'muse-wonder':           'Muse Wonder',
+    'gemini-4-argon':        'Gemini 4 Argon',
     'claude-opus-5-5':       'Claude Opus 5.5',
     'qwen3.6-35b-a3b':       'Qwen 3.6',
     'gemma-4-26b-a4b-it':    'Gemma 4 26B',
