@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T17:33:30.808453+00:00",
+  "generated_at": "2026-11-10T17:53:37.701767+00:00",
   "variants": [
     "no_tools",
     "no_tools_confidence",
@@ -11,9 +11,9 @@
     "no_tools_brier_told"
   ],
   "totals": {
-    "cost_usd": 6194.880947,
-    "time_seconds": 29364470.73,
-    "n_tasks_done": 71828,
+    "cost_usd": 6197.356729,
+    "time_seconds": 29368185.46,
+    "n_tasks_done": 71833,
     "per_model": {
       "claude-fable-5": {
         "cost_usd": 975.022031,
@@ -106,10 +106,10 @@
         "avg_time_seconds": 330.31
       },
       "gemini-4-carbon": {
-        "cost_usd": 89.908867,
-        "time_seconds": 121810.21,
-        "n_tasks_done": 1283,
-        "avg_time_seconds": 94.94
+        "cost_usd": 92.384649,
+        "time_seconds": 125524.94,
+        "n_tasks_done": 1288,
+        "avg_time_seconds": 97.46
       },
       "gemma-4-26b-a4b-it": {
         "cost_usd": 11.40519,
@@ -687,7 +687,7 @@
         "low"
       ],
       "new": true,
-      "note": "PROVISIONAL: exported mid-run. Run on Google's own API at low reasoning effort. About 30 of its 1400 questions (mostly band-widening chess puzzles) were still running and are not counted yet; scores will update when the run completes."
+      "note": "Run on Google's own API at low reasoning effort. 112 of its 1400 questions are not counted: on 110 hard items (49 reasoning puzzles, 43 chess puzzles, 13 string rules, 6 code tracing) it reasoned through the full 65,536-token output allowance without committing an answer, plus one safety-filter block and one empty reply. Its scores cover the remaining 1288. (Google lists a 32,768-token output cap for this model, but it is not enforced; it wrote up to 65,536.)"
     },
     {
       "slug": "glm-5.2",
@@ -21514,19 +21514,19 @@
       },
       "chess_puzzles": {
         "no_tools": {
-          "n_tasks": 114,
-          "n_done": 92,
+          "n_tasks": 119,
+          "n_done": 97,
           "n_excluded": 22,
           "n_unfinished": 22,
-          "mean_score": 0.4565,
-          "mean_confidence": 78.0435,
+          "mean_score": 0.4433,
+          "mean_confidence": 79.0,
           "epochs_seen": [
             1
           ],
-          "cost_usd": 14.663442,
-          "cost_failed_usd": 14.442756,
-          "time_seconds": 23418.31,
-          "avg_time_seconds": 254.55
+          "cost_usd": 17.139224,
+          "cost_failed_usd": 27.573706,
+          "time_seconds": 27133.04,
+          "avg_time_seconds": 279.72
         },
         "no_tools_confidence": {
           "n_tasks": 80,

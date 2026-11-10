@@ -362,6 +362,7 @@ window.TimePlot = (() => {
         'gemini-3.5-flash':   "A few answers were discarded by Google's batch API.",
         'gemma-4-26b-a4b-it': 'Frequently returns unparseable answers.',
         'glm-5.2':            'Some questions returned no parseable answer.',
+        'gemini-4-carbon':    'On many hard puzzles it thought through its whole output allowance without answering.',
         'claude-fable-5.2':   'On many hard chess puzzles it thought past the output cap without answering.',
         'gemini-4-argon':     "Three chess answers were blocked by Google's safety filter.",
         'muse-wonder':        'Some answers never arrived (dropped provider streams), mostly on the hardest chess puzzles.',
