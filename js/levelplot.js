@@ -242,7 +242,9 @@ window.LevelPlot = (() => {
     // models: the roster line-up, data-having only (extrapolated Fable included — it plots
     // whatever sparse points it has). Default: Gemini 3.5 Flash (the example in the prose).
     const models = Data.roster().filter(m => m.has_data)
-      .map(m => ({ value: m.slug, display: Data.display(m.slug) }));
+      .map(m => ({ value: m.slug, display: Data.display(m.slug) }))
+      // alphabetical by display name; numeric-aware so "Gemini 3.10" sorts after "Gemini 3.9"
+      .sort((a, b) => a.display.localeCompare(b.display, undefined, { numeric: true, sensitivity: 'base' }));
     const domains = [{ value: 'overall', display: 'Overall (all domains)' },
       ...Data.domains().map(d => ({ value: d.name, display: Data.domainDisplay(d.name) }))];
     if (!models.length || domains.length < 2) return;
