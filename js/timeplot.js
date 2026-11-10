@@ -48,6 +48,7 @@ window.TimePlot = (() => {
     'gpt-6.1-sol':            '2026-09-29',
     'muse-wonder':            '2026-10-12',
     'gemini-4-argon':         '2026-10-13',
+    'gemini-4-carbon':        '2026-10-28',
     'deepseek-flash':         '2026-10-17',
     'claude-fable-5.2':       '2026-11-09',
     'muse-spark-1.1':         '2026-07-09',

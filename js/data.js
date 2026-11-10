@@ -41,6 +41,7 @@ const Data = (() => {
     'gpt-6.1-sol':           'GPT-6.1 Sol',
     'muse-wonder':           'Muse Wonder',
     'gemini-4-argon':        'Gemini 4 Argon',
+    'gemini-4-carbon':       'Gemini 4 Carbon',
     'deepseek-flash':        'DeepSeek V4.1 Flash',
     'claude-fable-5.2':      'Claude Fable 5.2',
     'claude-opus-5-5':       'Claude Opus 5.5',
