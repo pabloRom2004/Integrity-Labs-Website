@@ -4,19 +4,19 @@
   "domain": "spatial_reasoning_exp",
   "variant": "no_tools",
   "scorer": "spatial_mc_with_confidence",
-  "n_tasks": 139,
-  "n_done": 139,
+  "n_tasks": 140,
+  "n_done": 140,
   "n_excluded": 0,
   "n_unfinished": 0,
-  "mean_score": 0.7194,
-  "mean_confidence": 90.036,
+  "mean_score": 0.7214,
+  "mean_confidence": 89.9786,
   "epochs_seen": [
     1
   ],
-  "cost_usd": 13.42971,
+  "cost_usd": 14.072374,
   "cost_failed_usd": 0.386524,
-  "time_seconds": 21031.64,
-  "avg_time_seconds": 151.31,
+  "time_seconds": 21862.74,
+  "avg_time_seconds": 156.16,
   "tasks": [
     {
       "id": "spatial_reasoning_exp_scaled_l01_001",
@@ -3159,6 +3159,30 @@
           "abs_error": 0.0,
           "cost_usd": 0.176106,
           "time_seconds": 233.055
+        }
+      ]
+    },
+    {
+      "id": "spatial_reasoning_exp_scaled_l08_022",
+      "difficulty": 8,
+      "scout": false,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 82.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.642664,
+      "time_seconds": 831.1,
+      "working_seconds": 831.02,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 82.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.642664,
+          "time_seconds": 831.1
         }
       ]
     },

@@ -5,18 +5,18 @@
   "variant": "no_tools",
   "scorer": "chess_mate_with_confidence",
   "n_tasks": 119,
-  "n_done": 97,
-  "n_excluded": 22,
-  "n_unfinished": 22,
-  "mean_score": 0.4433,
-  "mean_confidence": 79.0,
+  "n_done": 98,
+  "n_excluded": 21,
+  "n_unfinished": 21,
+  "mean_score": 0.449,
+  "mean_confidence": 79.1939,
   "epochs_seen": [
     1
   ],
-  "cost_usd": 17.139224,
-  "cost_failed_usd": 27.573706,
-  "time_seconds": 27133.04,
-  "avg_time_seconds": 279.72,
+  "cost_usd": 17.510052,
+  "cost_failed_usd": 29.543172,
+  "time_seconds": 27612.27,
+  "avg_time_seconds": 281.76,
   "tasks": [
     {
       "id": "chess_puzzles_l01_001",
@@ -1191,6 +1191,30 @@
           "abs_error": 0.0,
           "cost_usd": 0.474988,
           "time_seconds": 635.804
+        }
+      ]
+    },
+    {
+      "id": "chess_puzzles_l06_007",
+      "difficulty": 6,
+      "scout": true,
+      "status": "done",
+      "epochs": 1,
+      "score": 1.0,
+      "n_correct": 1,
+      "confidence_mean": 98.0,
+      "abs_error_mean": 0.0,
+      "cost_usd": 0.370828,
+      "time_seconds": 479.23,
+      "working_seconds": 479.01,
+      "per_epoch": [
+        {
+          "epoch": 1,
+          "correct": 1.0,
+          "confidence": 98.0,
+          "abs_error": 0.0,
+          "cost_usd": 0.370828,
+          "time_seconds": 479.227
         }
       ]
     },
@@ -2384,12 +2408,6 @@
     },
     {
       "id": "chess_puzzles_l06_006",
-      "difficulty": 6,
-      "scout": true,
-      "status": "excluded"
-    },
-    {
-      "id": "chess_puzzles_l06_007",
       "difficulty": 6,
       "scout": true,
       "status": "excluded"
