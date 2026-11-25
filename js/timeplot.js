@@ -17,7 +17,7 @@ window.TimePlot = (() => {
   // (legacy applies to the scatter only).
   // exclEst (model-size axis only, default off = estimates included): hide models whose
   // size is a community estimate rather than an official published figure.
-  const st = { x: 'date', legacy: false, all: false, order: 'brier', view: 'bar', errbars: false, exclEst: false };
+  const st = { x: 'date', legacy: false, all: false, order: 'brier', view: 'bar', errbars: false, exclEst: false, pplY: 'ppl' };
   const TOP_N = 22;
   let wired = false;
 
@@ -25,6 +25,13 @@ window.TimePlot = (() => {
   const RELEASE = {
     'gpt-3.5-turbo':          '2023-03-01',
     'gpt-4o':                 '2024-05-13',
+    'gpt-4.1':                '2025-04-14',
+    'gpt-5':                  '2025-08-07',
+    'gpt-5.2':                '2025-12-11',
+    'gpt-5.4':                '2026-03-05',
+    'o3':                     '2025-04-16',
+    'claude-opus-4-6':        '2026-02-04',
+    'claude-opus-4-7':        '2026-04-16',
     'gemini-3.1-pro-preview': '2026-02-19',
     'gemma-4-26b-a4b-it':     '2026-04-02',
     'qwen3.6-35b-a3b':        '2026-04-16',
@@ -105,6 +112,38 @@ window.TimePlot = (() => {
     'inkling':                { t: 975,   a: 41,   c: 'official' },            // Thinking Machines model card
   };
 
+  // OpenAI's "Base model log-perplexity" chart (Nov 2026), replicated point for point. Values
+  // were read off the published image by locating each dot's centre against the axis ticks
+  // (+/-0.001 perplexity, +/-2 weeks on the date). year = OpenAI's "release or evaluation
+  // date" as a decimal year. Labels sit where OpenAI put them: lx/ly beside the dot, or lyr =
+  // the height of the label in the right-hand column. slug = our run of that base model
+  // (null = not run on Integrity Bench); models sharing a base share a point (GPT-4o / o1).
+  // alt = a second model we ran on the same base: its own dot on the accuracy view, off the line.
+  const OPENAI_PPL = [
+    { label: 'GPT-3.5',             slug: 'gpt-3.5-turbo', year: 2022.204, ppl: 0.9864, lx: 2022.217, ly: 1.0033 },
+    { label: 'GPT-4',               slug: null,            year: 2023.203, ppl: 0.9134, lx: 2023.258, ly: 0.9395 },
+    { label: 'GPT-4 Turbo',         slug: null,            year: 2023.870, ppl: 0.9094, lx: 2023.891, ly: 0.8910 },
+    { label: 'GPT-4o / o1',         slug: 'gpt-4o',        year: 2024.370, ppl: 0.9044, lx: 2024.234, ly: 0.9403 },
+    { label: 'GPT-4.5',             slug: null,            year: 2025.120, ppl: 0.8763, lx: 2025.039, ly: 0.8586 },
+    { label: 'GPT-4.1 / o3',        slug: 'gpt-4.1', alt: 'o3', year: 2025.288, ppl: 0.9023, lx: 2025.170, ly: 0.9548 },
+    { label: 'GPT-5 / 5.1',         slug: 'gpt-5',         year: 2025.621, ppl: 0.8933, lyr: 0.9540 },
+    { label: 'GPT-5.2',             slug: 'gpt-5.2',       year: 2025.955, ppl: 0.8883, lyr: 0.9306 },
+    { label: 'GPT-5.3-Codex / 5.4', slug: 'gpt-5.4',       year: 2026.120, ppl: 0.8714, lyr: 0.9063 },
+    { label: 'GPT-5.5',             slug: 'gpt-5.5',       year: 2026.287, ppl: 0.8482, lyr: 0.8772 },
+    { label: 'GPT-5.6 Sol',         slug: 'gpt-5.6-sol',   year: 2026.538, ppl: 0.8282, lyr: 0.8441 },
+    { label: 'GPT-6 Astra',         slug: 'gpt-6-astra',   year: 2026.705, ppl: 0.7833, lyr: 0.8101 },
+    { label: 'GPT-6.2 Astra',       slug: 'gpt-6.2-astra', year: 2026.871, ppl: 0.7612, lyr: 0.7762 },
+    { label: 'Internal model',      slug: null,            year: 2026.872, ppl: 0.7323, lyr: 0.7406, internal: true },
+  ];
+  // OpenAI's capability lines: each sits at the perplexity of the model that first showed it
+  const PPL_LINES = [
+    [0.9864, 'Fluent conversation'],
+    [0.9134, 'Benefits from thinking before answering'],
+    [0.8714, 'Useful coder'],
+    [0.8282, 'Cybersecurity expert'],
+    [0.7612, 'Solved a Millennium Prize math problem'],
+  ];
+
   const fmtCost = c => c >= 1 ? '$' + c.toFixed(2) : c >= 0.1 ? '$' + c.toFixed(2) : c >= 0.01 ? '$' + c.toFixed(3) : '$' + c.toFixed(4);
   const fmtDate = d => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   const fmtParams = v => v >= 1000 ? (v % 1000 ? (v / 1000).toFixed(1) : v / 1000) + 'T' : v + 'B';
@@ -132,6 +171,9 @@ window.TimePlot = (() => {
                  titleOfficial: 'Total parameters, open-weights models only (log scale)',
                  val: p => PARAMS[p.slug] ? PARAMS[p.slug].t : null, fmt: fmtParams, log: true,
                  phrase: 'its parameter count' },
+    // Not a scatter axis: picking it swaps in renderPpl, a replica of OpenAI's chart (date on
+    // x, log-perplexity or our accuracy on y). Listed here so it appears in the dropdown.
+    ppl:       { label: 'Log-perplexity', val: () => null },
   };
 
   /* ---- shared tooltip (same element + classes as the table), centred just above the cursor ---- */
@@ -193,6 +235,125 @@ window.TimePlot = (() => {
     return g;
   }
 
+  /* ---- OpenAI log-perplexity replica: release date on x, and on y either OpenAI's base-model
+     log-perplexity (every point on their chart) or our overall accuracy (the models we ran) ---- */
+  async function renderPpl(mount) {
+    const runs = {};
+    for (const r of await Data.tableRowsAll({ domain: 'overall', scouts: true }))
+      if (!r.placeholder && r.arm !== 'high' && r.accuracy != null) runs[r.slug] = r;
+    const isPpl = st.pplY === 'ppl';
+    // The accuracy view names the model we ran (GPT-4o), not the shared base (GPT-4o / o1), and
+    // gives an alt model (o3 on GPT-4.1's base) its own dot, labelled beside it, off the line.
+    const pts = [];
+    for (const p of OPENAI_PPL) {
+      if (isPpl) { pts.push({ ...p, runList: [runs[p.slug], runs[p.alt]].filter(Boolean), v: p.ppl, name: p.label }); continue; }
+      if (runs[p.slug]) pts.push({ ...p, runList: [runs[p.slug]], v: runs[p.slug].accuracy, name: runs[p.slug].display });
+      if (p.alt && runs[p.alt]) pts.push({ ...p, lx: null, lyr: null, offLine: true,
+        runList: [runs[p.alt]], v: runs[p.alt].accuracy, name: runs[p.alt].display });
+    }
+    if (!pts.length) { mount.innerHTML = '<div class="plot-empty">No data for this selection.</div>'; return; }
+
+    const W = 860, mL = 84, mR = 168, mT = 54, mB = 64, H = 398 + mT + mB;
+    const iw = W - mL - mR, ih = H - mT - mB;
+    const x0 = 2020.29, x1 = 2026.873;   // OpenAI's own axis span
+    let y0 = 0.6796, y1 = 1.05;          // ... and their y span, "?" strip included
+    if (!isPpl) {
+      const vs = pts.map(p => p.v);
+      y0 = Math.max(0, Math.floor((Math.min(...vs) - 5) / 10) * 10);
+      y1 = Math.min(100, Math.ceil((Math.max(...vs) + 5) / 10) * 10);
+    }
+    const X = v => mL + ((v - x0) / (x1 - x0)) * iw;
+    const Y = v => mT + ((y1 - v) / (y1 - y0)) * ih;
+    const xR = mL + iw, yB = mT + ih;
+    const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, class: 'level-plot-svg', role: 'img' });
+
+    svg.appendChild(el('text', { x: 16, y: 24, class: 'pp-title' },
+      isPpl ? 'Base model log-perplexity' : 'Integrity Bench accuracy'));
+    svg.appendChild(el('text', { x: 16, y: 41, class: 'pp-sub' }, isPpl
+      ? "Values read from OpenAI's published chart"
+      : "Overall accuracy of the OpenAI models we ran, at OpenAI's dates for each base model"));
+
+    if (isPpl) {
+      // the "?" strip below 0.7, then OpenAI's dotted capability lines with their captions
+      svg.appendChild(el('rect', { x: mL, y: Y(0.7), width: iw, height: yB - Y(0.7), class: 'pp-unknown' }));
+      svg.appendChild(el('text', { x: mL + 9, y: (Y(0.7) + yB) / 2 + 4, class: 'pp-unknown-q' }, '?'));
+      for (const [v, text] of PPL_LINES) {
+        svg.appendChild(el('line', { x1: mL, y1: Y(v), x2: xR, y2: Y(v), class: 'pp-thresh-line' }));
+        svg.appendChild(el('text', { x: mL + 7, y: Y(v) + 15, class: 'pp-thresh' }, text));
+      }
+    }
+
+    // axes: solid left + bottom lines, outward ticks, monospace tick labels (as OpenAI's)
+    svg.appendChild(el('line', { x1: mL, y1: mT, x2: mL, y2: yB, class: 'pp-axis-line' }));
+    svg.appendChild(el('line', { x1: mL, y1: yB, x2: xR, y2: yB, class: 'pp-axis-line' }));
+    const yTicks = isPpl ? [0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05] : linTicks(y0, y1, 6);
+    for (const v of yTicks) {
+      svg.appendChild(el('line', { x1: mL - 6, y1: Y(v), x2: mL, y2: Y(v), class: 'pp-axis-line' }));
+      svg.appendChild(el('text', { x: mL - 12, y: Y(v) + 4, 'text-anchor': 'end', class: 'pp-tick' },
+        isPpl ? String(+v.toFixed(2)) : v + '%'));
+    }
+    for (let yr = 2022; yr <= 2026; yr++) {
+      svg.appendChild(el('line', { x1: X(yr), y1: yB, x2: X(yr), y2: yB + 6, class: 'pp-axis-line' }));
+      svg.appendChild(el('text', { x: X(yr), y: yB + 24, 'text-anchor': 'middle', class: 'pp-tick' }, String(yr)));
+    }
+    svg.appendChild(el('text', { x: mL + iw / 2, y: H - 10, 'text-anchor': 'middle', class: 'pp-axis-title' },
+      'Release or evaluation date'));
+    svg.appendChild(el('text', { x: 0, y: 0, 'text-anchor': 'middle', class: 'pp-axis-title',
+      transform: `translate(22 ${mT + ih / 2}) rotate(-90)` }, isPpl ? 'Log-perplexity' : 'Accuracy (%)'));
+
+    // the connecting line (the internal model is a separate square, as on OpenAI's chart)
+    const line = pts.filter(p => !p.internal && !p.offLine).sort((a, b) => a.year - b.year);
+    svg.appendChild(el('polyline', { points: line.map(p => `${X(p.year)},${Y(p.v)}`).join(' '), class: 'pp-line' }));
+
+    // labels: OpenAI's own spots on the perplexity view; on the accuracy view the inline ones
+    // go just above their dot and the right-column ones are spaced out top to bottom
+    const col = pts.filter(p => p.lyr != null).map(p => ({ p, y: isPpl ? Y(p.lyr) : Y(p.v) }));
+    if (!isPpl) {
+      col.sort((a, b) => a.y - b.y);
+      for (let i = 1; i < col.length; i++) col[i].y = Math.max(col[i].y, col[i - 1].y + 22);
+      const over = col.length ? col[col.length - 1].y - yB : 0;
+      if (over > 0) for (const c of col) c.y -= over;
+    }
+    for (const { p, y } of col) {
+      const cx = X(p.year), cy = Y(p.v);
+      svg.appendChild(el('polyline', { class: 'pp-lead',
+        points: `${cx},${cy} ${xR + 6},${cy} ${xR + 24},${y - 4}` }));
+      svg.appendChild(el('text', { x: xR + 28, y, class: 'pp-label' }, p.name));
+    }
+    for (const p of pts.filter(p => p.lx != null)) {
+      const cx = X(p.year), cy = Y(p.v);
+      const lx = isPpl ? X(p.lx) : cx, ly = isPpl ? Y(p.ly) : cy - 18;
+      if (isPpl) {   // short leader from the dot to the label's near edge
+        const above = ly < cy;
+        svg.appendChild(el('line', { x1: cx, y1: cy + (above ? -5 : 5), x2: lx, y2: above ? ly + 6 : ly - 13,
+          class: 'pp-lead' }));
+      }
+      svg.appendChild(el('text', { x: lx, y: ly + 4, 'text-anchor': 'middle', class: 'pp-label' }, p.name));
+    }
+    for (const p of pts.filter(p => p.offLine))
+      svg.appendChild(el('text', { x: X(p.year) + 9, y: Y(p.v) + 4, class: 'pp-label' }, p.name));
+
+    // dots (and the internal model's square) with tooltips
+    for (const p of pts) {
+      const cx = X(p.year), cy = Y(p.v);
+      const node = p.internal
+        ? el('rect', { x: cx - 5, y: cy - 5, width: 10, height: 10, class: 'pp-internal' })
+        : el('circle', { cx, cy, r: 5, class: 'pp-dot' });
+      const html = `<div class="tt-title">${p.internal ? 'OpenAI internal model (unreleased)' : p.name}</div>
+        <div class="tt-row">Base-model log-perplexity: <b>${p.ppl.toFixed(3)}</b>${p.name !== p.label ? ` (OpenAI's ${p.label} point)` : ''}</div>`
+        + (p.runList.length
+          ? p.runList.map(r => `<div class="tt-row">Integrity Bench accuracy: <b>${r.accuracy.toFixed(1)}%</b>${isPpl ? ` (as ${r.display})` : ''}</div>`).join('')
+          : '<div class="tt-row">Not run on Integrity Bench</div>');
+      node.addEventListener('mousemove', e => showTip(html, e));
+      node.addEventListener('pointerdown', e => showTip(html, e));
+      node.addEventListener('mouseleave', hideTip);
+      svg.appendChild(node);
+    }
+
+    mount.innerHTML = '';
+    mount.appendChild(svg);
+  }
+
   /* ---- render ---- */
   async function render() {
     const mount = document.getElementById('time-plot-mount');
@@ -208,6 +369,12 @@ window.TimePlot = (() => {
     // the "Exclude estimated models" pill only makes sense on the model-size axis
     const exWrap = document.getElementById('tp-exclest-wrap');
     if (exWrap) exWrap.hidden = mode !== 'params';
+    // the perplexity axis is its own fixed set of OpenAI models, so the legacy pill is moot there
+    const legWrap = document.getElementById('tp-legacy-wrap');
+    if (legWrap) legWrap.hidden = mode === 'bar' || mode === 'ppl';
+    const pyWrap = document.getElementById('tp-ppl-y-wrap');
+    if (pyWrap) pyWrap.hidden = mode !== 'ppl';
+    if (mode === 'ppl') return renderPpl(mount);
     const toPt = r => ({ ...r, date: new Date(RELEASE[r.slug]), brier: (r.bandRms / 100) ** 2,
                      integrity: 100 - 400 * (r.bandRms / 100) ** 2 });
     let pts = (await Data.tableRowsAll({ domain: 'overall', scouts: true }))
@@ -372,6 +539,8 @@ window.TimePlot = (() => {
         'gemini-4-hydrogen':  "Seventeen chess questions were blocked by Google's prompt filter.",
         'muse-wonder':        'Some answers never arrived (dropped provider streams), mostly on the hardest chess puzzles.',
         'gpt-6.1-sol':        'Six code-tracing replies came back without an answer line.',
+        'o3':                 'On some hard puzzles it declined to answer (no confidence given), twice.',
+        'claude-opus-4-7':    'One chess puzzle ran past the output cap twice without an answer.',
         'gpt-6.2-astra':      'Two code-tracing replies gave a script to compute the answers instead of the answers.',
         'gpt-6-sol':          'Two code-tracing replies came back without an answer line.',
         'claude-opus-5-5':    "Blocked by Anthropic's safety filter on some code-tracing and string-rule questions; one thought past the output cap.",
@@ -562,6 +731,18 @@ window.TimePlot = (() => {
     if (all) all.onchange = () => { st.all = all.checked; render(); };
     const eb = document.getElementById('tp-errbars');
     if (eb) eb.onchange = () => { st.errbars = eb.checked; render(); };
+    document.querySelectorAll('#tp-ppl-y .arm-opt').forEach(btn => {
+      btn.onclick = () => {
+        const slider = btn.closest('.arm-slider');
+        slider.querySelectorAll('.arm-opt').forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        slider.classList.toggle('arm-high', btn.dataset.value !== 'ppl');
+        st.pplY = btn.dataset.value;
+        render();
+      };
+    });
     document.querySelectorAll('#tp-order .arm-opt').forEach(btn => {
       btn.onclick = () => {
         const slider = btn.closest('.arm-slider');

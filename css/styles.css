@@ -148,6 +148,21 @@ a { color: inherit; }
 .lp-grid { stroke: var(--line); stroke-width: 1; }
 .lp-grid-50 { stroke: var(--ink-faint); stroke-dasharray: 4 4; }
 .lp-axis { font-size: 12px; fill: var(--ink-faint); }
+/* OpenAI log-perplexity replica (timeplot.js renderPpl): OpenAI's navy + light-blue styling */
+.pp-title { font-size: 17px; font-weight: 700; fill: var(--ink); }
+.pp-sub { font-size: 11.5px; fill: var(--ink-faint); }
+.pp-axis-line { stroke: var(--ink); stroke-width: 1; }
+.pp-tick { font-size: 11.5px; fill: var(--ink); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.pp-axis-title { font-size: 13px; fill: var(--ink); }
+.pp-line { fill: none; stroke: #2B4A8B; stroke-width: 1.6; }
+.pp-dot { fill: #2B4A8B; cursor: pointer; }
+.pp-internal { fill: #6A9CF2; cursor: pointer; }
+.pp-lead { fill: none; stroke: #8DB0EA; stroke-width: 1; }
+.pp-thresh-line { stroke: #9DB8EC; stroke-width: 1; stroke-dasharray: 2 3; }
+.pp-thresh { font-size: 11px; fill: var(--ink); }
+.pp-label { font-size: 11.5px; font-weight: 700; fill: var(--ink); }
+.pp-unknown { fill: #EAF2FC; }
+.pp-unknown-q { font-size: 12px; fill: #2B4A8B; }
 .lp-axis-title { font-size: 12.5px; }
 .lp-dot { stroke: #fff; stroke-width: 1.5; }
 .lp-legend { margin-top: 6px; }
