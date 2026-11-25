@@ -29,7 +29,6 @@ window.TimePlot = (() => {
     'gpt-5':                  '2025-08-07',
     'gpt-5.2':                '2025-12-11',
     'gpt-5.4':                '2026-03-05',
-    'o3':                     '2025-04-16',
     'claude-opus-4-6':        '2026-02-04',
     'claude-opus-4-7':        '2026-04-16',
     'gemini-3.1-pro-preview': '2026-02-19',
@@ -125,7 +124,7 @@ window.TimePlot = (() => {
     { label: 'GPT-4 Turbo',         slug: null,            year: 2023.870, ppl: 0.9094, lx: 2023.891, ly: 0.8910 },
     { label: 'GPT-4o / o1',         slug: 'gpt-4o',        year: 2024.370, ppl: 0.9044, lx: 2024.234, ly: 0.9403 },
     { label: 'GPT-4.5',             slug: null,            year: 2025.120, ppl: 0.8763, lx: 2025.039, ly: 0.8586 },
-    { label: 'GPT-4.1 / o3',        slug: 'gpt-4.1', alt: 'o3', year: 2025.288, ppl: 0.9023, lx: 2025.170, ly: 0.9548 },
+    { label: 'GPT-4.1 / o3',        slug: 'gpt-4.1', year: 2025.288, ppl: 0.9023, lx: 2025.170, ly: 0.9548 },
     { label: 'GPT-5 / 5.1',         slug: 'gpt-5',         year: 2025.621, ppl: 0.8933, lyr: 0.9540 },
     { label: 'GPT-5.2',             slug: 'gpt-5.2',       year: 2025.955, ppl: 0.8883, lyr: 0.9306 },
     { label: 'GPT-5.3-Codex / 5.4', slug: 'gpt-5.4',       year: 2026.120, ppl: 0.8714, lyr: 0.9063 },
@@ -243,7 +242,7 @@ window.TimePlot = (() => {
       if (!r.placeholder && r.arm !== 'high' && r.accuracy != null) runs[r.slug] = r;
     const isPpl = st.pplY === 'ppl';
     // The accuracy view names the model we ran (GPT-4o), not the shared base (GPT-4o / o1), and
-    // gives an alt model (o3 on GPT-4.1's base) its own dot, labelled beside it, off the line.
+    // gives an alt model (another run on the same base) its own dot, labelled beside it, off the line.
     const pts = [];
     for (const p of OPENAI_PPL) {
       if (isPpl) { pts.push({ ...p, runList: [runs[p.slug], runs[p.alt]].filter(Boolean), v: p.ppl, name: p.label }); continue; }
@@ -539,7 +538,6 @@ window.TimePlot = (() => {
         'gemini-4-hydrogen':  "Seventeen chess questions were blocked by Google's prompt filter.",
         'muse-wonder':        'Some answers never arrived (dropped provider streams), mostly on the hardest chess puzzles.',
         'gpt-6.1-sol':        'Six code-tracing replies came back without an answer line.',
-        'o3':                 'On some hard puzzles it declined to answer (no confidence given), twice.',
         'claude-opus-4-7':    'One chess puzzle ran past the output cap twice without an answer.',
         'gpt-6.2-astra':      'Two code-tracing replies gave a script to compute the answers instead of the answers.',
         'gpt-6-sol':          'Two code-tracing replies came back without an answer line.',

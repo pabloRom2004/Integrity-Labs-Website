@@ -63,7 +63,6 @@ const Data = (() => {
     'gpt-5':                 'GPT-5',
     'gpt-5.2':               'GPT-5.2',
     'gpt-5.4':               'GPT-5.4',
-    'o3':                    'o3',
     'claude-opus-4-6':       'Claude Opus 4.6',
     'claude-opus-4-7':       'Claude Opus 4.7',
     'gemini-3.6-flash':      'Gemini 3.6 Flash',
@@ -73,7 +72,7 @@ const Data = (() => {
 
   async function load() {
     const logos = preloadLogos();
-    index = await fetch(`${DATA_DIR}/index.json`).then(r => r.json());
+    index = await fetch(`${DATA_DIR}/index.json`, { cache: "no-cache" }).then(r => r.json());
     await logos;
     return index;
   }
